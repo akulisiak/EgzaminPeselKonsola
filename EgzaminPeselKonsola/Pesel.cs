@@ -16,6 +16,14 @@ namespace EgzaminPeselKonsola
             this.numerPesel = numerPesel;
         }
 
+        /*
+         * nazwa funkcji:           SprawdzPlec
+         * opis funkcji:            Funkcja zwraca znak 'K' lub 'M' w zależności od przedostatniej wartości numeru pesel
+         * parametry:               Brak
+         * zwracany typ i opis:     Zwracany typ to char oznaczajacy płeć na podstawie numeru pesel
+         * autor:                   0986532127               
+         */
+
         public char SprawdzPlec()
         {
             if (int.Parse(numerPesel[9].ToString()) % 2 == 0)
