@@ -18,7 +18,7 @@ namespace EgzaminPeselKonsola
 
         public char SprawdzPlec()
         {
-            if (Convert.ToInt32(numerPesel[9]) % 2 == 0)
+            if (int.Parse(numerPesel[9].ToString()) % 2 == 0)
             {
                 return 'K';
             }
@@ -34,7 +34,7 @@ namespace EgzaminPeselKonsola
 
             for (int i = 0; i < 10; i++)
             {
-                s += Convert.ToInt32(numerPesel[i] * mnozniki[i]);
+                s += int.Parse(numerPesel[i].ToString()) * mnozniki[i];
             }
 
             int m = s % 10;
@@ -49,7 +49,7 @@ namespace EgzaminPeselKonsola
                 r = 10 - m;
             }
 
-            if (r == Convert.ToInt32(numerPesel[10])) 
+            if (r == int.Parse(numerPesel[10].ToString())) 
             {
                 return true;
             }
